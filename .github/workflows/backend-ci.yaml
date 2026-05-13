@@ -26,8 +26,9 @@ jobs:
         run: npm install
       - name: Debug Folder Structure
         run: ls -R src/test
-      - name: Run linter on backend
+      - name: Run linter on backend 
         run: npm run lint
       - name: Run backend tests
         run: npm test
-        MONGOMS_SYSTEM_BINARY_OS_CONFIG: 'ubuntu,18.04'
+        env:
+          MONGOMS_SYSTEM_BINARY_OS_CONFIG: 'ubuntu,18.04'
