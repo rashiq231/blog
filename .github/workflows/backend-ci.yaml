@@ -24,6 +24,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
+      - name: Debug Folder Structure
+        run: ls -R src/test
       - name: Run linter on backend
         run: npm run lint
       - name: Run backend tests
